@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -88,5 +87,5 @@ h1 {font-family: 'Indie Flower', cursive;}
 } 
 
 .calculator_screen {background-color: #263d4e;}
-.calculator_number input {padding: 1rem;}
-.calculator_tool input {margin-top: 1rem;}
+.calculator_number button {padding: 1rem;}
+.calculator_tool button {margin-top: 1rem;}

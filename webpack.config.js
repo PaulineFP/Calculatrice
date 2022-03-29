@@ -31,6 +31,17 @@ module.exports = {
        test: /\.(scss|css)$/,
        use: ["style-loader", "css-loader"],
      },
+     {
+      test: /\.(svg|eot|woff|woff2|ttf)$/,
+      type: 'asset/inline'
+    },
+    {
+      test: /\.(svg|eot|woff|woff2|ttf)$/,
+      type: 'asset/resource',
+      generator: {
+        //publicPath: '../fonts/',
+        filename: 'compiled/fonts/[hash][ext][query]'
+      }
   ],
  },
   plugins: [

@@ -10,47 +10,91 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <!--load all Font Awesome  6 styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
+   
 <body>
     <div class="container mx-auto px-4 mt-32 ">
         <h1 class="text-center text-4xl font-bold text-indigo-900 mb-9">Création d'une calculatrice en ligne</h1>
 
-        <section class="calculatrice  flex justify-center items-center">
-            <div class="calculator_body w-72 p-4 text-slate-300">
-                <div class="calculator_screen w-3/4 mx-auto px-4 h-36">
+        <section class="calculator  flex justify-center items-center">
+            <div class="calculator_body w-64 p-4 text-slate-300">
+                <div class="calculator_screen w-11/12 mx-auto px-4 h-24 mb-7">
 
                 </div>
-                <div class="calculator_keyboard flex justify-evenly">
-                    <div class="calculator_number flex flex-wrap w-6/12">
-                        <input type="button" value="1">
-                        <input type="button" value="2">
-                        <input type="button" value="3">
-                        <input type="button" value="4">
-                        <input type="button" value="5">
-                        <input type="button" value="6">
-                        <input type="button" value="7">
-                        <input type="button" value="8">
-                        <input type="button" value="9">
-                        <input type="button" value=",">
-                        <input type="button" value="0">
-                        <input type="button" value="=">
+                <div class="grid grid-cols-4 w-48 mx-auto my-1">
+                    <div class="flex justify-center bg-gray-400">
+                        <button value="%" class="text-white">%</button>
                     </div>
-                    <div class="calculator_tool flex flex-col ">
-                        <input type="button" value="supr">
-                        <input type="button" value="/">
-                        <input type="button" value="X">
-                        <input type="button" value="-">
-                        <input type="button" value="+">
+                    <div class="flex justify-center bg-gray-400 ml-1">
+                        <button value="clear"><i class="fa-solid fa-explosion text-white"></i></button>
+                    </div>
+                    <div class="flex justify-center bg-gray-400 ml-1">
+                        <button value="clear_one"><i class="fa-solid fa-reply text-white"></i></button>
+                    </div>
+                    <div class="flex justify-center bg-orange-500 ml-1">
+                        <button value="/"><i class="fa-solid fa-divide text-white"></i></button>
                     </div>
                 </div>
+                <div class="grid grid-cols-4 w-48 mx-auto my-1">
+                    <div class="flex justify-center bg-gray-400">
+                        <button value="7" class="text-white">7</button>
+                    </div>
+                    <div class="flex justify-center bg-gray-400 ml-1">
+                        <button value="8" class="text-white">8</button>
+                    </div>
+                    <div class="flex justify-center bg-gray-400 ml-1">
+                        <button value="9" class="text-white">9</button>
+                    </div>
+                    <div class="flex justify-center bg-orange-500 ml-1">
+                        <button value="*" class="text-white"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-4 w-48 mx-auto my-1">
+                    <div class="flex justify-center bg-gray-400">
+                        <button value="4" class="text-white">4</button>
+                    </div>
+                    <div class="flex justify-center bg-gray-400 ml-1">
+                        <button value="5" class="text-white">5</button>
+                    </div>
+                    <div class="flex justify-center bg-gray-400 ml-1">
+                        <button value="6" class="text-white">6</button>
+                    </div>
+                    <div class="flex justify-center bg-orange-500 ml-1">
+                        <button value="-" class="text-white"><i class="fa-solid fa-minus"></i></button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-4 w-48 mx-auto my-1">
+                    <div class="flex justify-center bg-gray-400">
+                        <button value="1" class="text-white">1</button>
+                    </div>
+                    <div class="flex justify-center bg-gray-400 ml-1">
+                        <button value="2" class="text-white">2</button>
+                    </div>
+                    <div class="flex justify-center bg-gray-400 ml-1">
+                        <button value="3" class="text-white">3</button>
+                    </div>
+                    <div class="flex justify-center bg-orange-500 ml-1">
+                        <button value="+" class="text-white"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 w-48 mx-auto my-1">
+                    <div class="flex justify-center bg-gray-400">
+                        <button value="." class="text-white">.</button>
+                    </div>
+                    <div class="flex justify-center bg-gray-400 ml-1">
+                        <button value="0" class="text-white">0</button>
+                    </div>
+                    <div class="flex justify-center bg-orange-500 ml-1">
+                        <button value="=" class="text-white"><i class="fa-solid fa-equals"></i></button>
+                    </div>
+                </div>
+            
             </div>
-        </section>
-
+        </section>    
     </div>
-
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>
