@@ -20,12 +20,15 @@
 
         <section class="calculator  flex justify-center items-center">
             <div class="calculator_body w-64 p-4 text-slate-300">
-                <div id="screen" class="calculator_screen w-11/12 mx-auto px-4 h-24 mb-7">
+                <div class="calculator_screen w-11/12 mx-auto px-4 h-24 mb-7">
+                    <div id="screen"></div>
+                    <div id="total"></div>
+                
 
                 </div>
                 <div class="grid grid-cols-4 w-48 mx-auto my-1">
                     <div class="flex justify-center bg-gray-400">
-                        <button value="%" class="text-white">%</button>
+                        <button value="%" class="field text-white">%</button>
                     </div>
                     <div class="flex justify-center bg-gray-400 ml-1">
                         <button id="clear" value=""><i class="fa-solid fa-explosion text-white"></i></button>
@@ -34,7 +37,7 @@
                         <button value="clear_one"><i class="fa-solid fa-reply text-white"></i></button>
                     </div>
                     <div class="flex justify-center bg-orange-500 ml-1">
-                        <button value="/" <i class="fa-solid fa-divide text-white"></i></button>
+                        <button value="/" <i class=" field fa-solid fa-divide text-white"></i></button>
                     </div>
                 </div>
                 <div class="grid grid-cols-4 w-48 mx-auto my-1">
@@ -48,7 +51,7 @@
                         <button value="9"  class="field text-white">9</button>
                     </div>
                     <div class="flex justify-center bg-orange-500 ml-1">
-                        <button value="*" class="text-white"><i class="fa-solid fa-xmark"></i></button>
+                        <button value="*" class="field text-white"><i class="fa-solid fa-xmark"></i></button>
                     </div>
                 </div>
                 <div class="grid grid-cols-4 w-48 mx-auto my-1">
@@ -62,7 +65,7 @@
                         <button value="6" class="field text-white">6</button>
                     </div>
                     <div class="flex justify-center bg-orange-500 ml-1">
-                        <button value="-" class="text-white"><i class="fa-solid fa-minus"></i></button>
+                        <button value="-" class="field text-white"><i class="fa-solid fa-minus"></i></button>
                     </div>
                 </div>
                 <div class="grid grid-cols-4 w-48 mx-auto my-1">
@@ -76,7 +79,7 @@
                         <button value="3" class="field text-white">3</button>
                     </div>
                     <div class="flex justify-center bg-orange-500 ml-1">
-                        <button value="+" class="text-white"><i class="fa-solid fa-plus"></i></button>
+                        <button value="+" class="field text-white"><i class="fa-solid fa-plus"></i></button>
                     </div>
                 </div>
                 <div class="grid grid-cols-3 w-48 mx-auto my-1">

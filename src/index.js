@@ -3,28 +3,40 @@ import '../assets/CSS/style.css';
 let boutons = document.querySelectorAll("button");
 let screenCalculator = document.querySelector("div#screen");
 let clear = document.querySelector("button#clear");
+let total = document.querySelector("div#total");
 
 
 
 let array = [];
-const resul = [];
+const result = [];
 
 boutons.forEach((button) =>{
     button.addEventListener('click', ()=>{
+        
         //fetsh button
         if (button.classList.contains("field")){
         array.push(button.value);
-        screenCalculator.innerHTML = array.join('');
+        let calcul = array.join('');
+        screenCalculator.innerHTML = calcul;
         }
         //Backtrack
         if (button.value === "clear_one"){
           array.pop();
           screenCalculator.innerHTML = array.join('');
          }
-         
-        // if (boutton total){
-
-        //}
+         //Result
+        if (button.value === "="){
+            // result.push(eval(array));
+            let calcul = array.join('');
+            console.log(eval(calcul))
+            //let resultat = eval(calcul);
+            // 
+            // console.log(resultat);
+            //  result.push(resultat);
+            result.push(eval(calcul));
+             console.log(result);
+             total.innerHTML = result;
+        }
     })
 })
 //Reset calculator
