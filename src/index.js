@@ -11,20 +11,23 @@ const resul = [];
 
 boutons.forEach((button) =>{
     button.addEventListener('click', ()=>{
-       
+        //fetsh button
         if (button.classList.contains("field")){
         array.push(button.value);
         screenCalculator.innerHTML = array.join('');
         }
-        // if (fleche retrour arriere){
-        //      array.pop(); 
-        // }
+        //Backtrack
+        if (button.value === "clear_one"){
+          array.pop();
+          screenCalculator.innerHTML = array.join('');
+         }
+         
         // if (boutton total){
 
-        // }
+        //}
     })
 })
-
+//Reset calculator
 clear.addEventListener('click', ()=> {
     array = [];
     console.log(array); 
