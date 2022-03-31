@@ -1,10 +1,36 @@
 import '../assets/CSS/style.css';
 
-//crée une class au clic (onclic / add event listener)
-//lors du clic, récuperer la valeur de chaque élément dans une varriable
-//afficher les valeurs récipérer dans l'écrant de la calculatrice grace à la variable
-//Récuperer ma variable et calculer l'opération
-//Mettre le résulatat dans une variable $résult
-// Afficher le résultat dans l'écrant de la calculatrice
+let boutons = document.querySelectorAll("button");
+let screenCalculator = document.querySelector("div#screen");
+let clear = document.querySelector("button#clear");
 
-var camera = window.FontAwesome.icon({ prefix: 'fas', iconName: 'camera' });
+
+
+let array = [];
+const resul = [];
+
+boutons.forEach((button) =>{
+    button.addEventListener('click', ()=>{
+       
+        if (button.classList.contains("field")){
+        array.push(button.value);
+        screenCalculator.innerHTML = array.join('');
+        }
+        // if (fleche retrour arriere){
+        //      array.pop(); 
+        // }
+        // if (boutton total){
+
+        // }
+    })
+})
+
+clear.addEventListener('click', ()=> {
+    array = [];
+    console.log(array); 
+    screenCalculator.innerHTML = 0; 
+})
+
+
+//document.write(5 + 6);
+// document.getElementById('mon_element').setAttribute('onclick','nom_de lafonction('paramètre',event));

@@ -40,9 +40,10 @@ module.exports = {
       type: 'asset/resource',
       generator: {
         //publicPath: '../fonts/',
-        filename: 'compiled/fonts/[hash][ext][query]'
+      filename: 'compiled/fonts/[hash][ext][query]'
       }
-  ],
+    }
+  ]
  },
   plugins: [
     new htmlWebpackPlugin({
