@@ -8,44 +8,36 @@ let total = document.querySelector("div#total");
 
 
 let array = [];
-const result = [];
 
 boutons.forEach((button) =>{
     button.addEventListener('click', ()=>{
         
         //fetsh button
         if (button.classList.contains("field")){
-        array.push(button.value);
-        let calcul = array.join('');
-        screenCalculator.innerHTML = calcul;
+            let calcul = eval(array.join(''));
+            array.push(button.value);
+            ///////////////
+            screenCalculator.innerHTML = array;
+            console.log(array);
+            //Bien diférencier les boutouns field et autre pour opperateur
         }
         //Backtrack
-        if (button.value === "clear_one"){
+        if (button.id.match("clear_one")){
           array.pop();
           screenCalculator.innerHTML = array.join('');
          }
          //Result
-        if (button.value === "="){
-            // result.push(eval(array));
-            let calcul = array.join('');
-            console.log(eval(calcul))
-            //let resultat = eval(calcul);
-            // 
-            // console.log(resultat);
-            //  result.push(resultat);
-            result.push(eval(calcul));
-             console.log(result);
-             total.innerHTML = result;
+        if (button.id.match("result")){
+            let result = eval(array.join(''));
+            array = [result];
+            total.innerHTML =  array ;
+            screenCalculator.innerHTML = "";  
         }
     })
 })
 //Reset calculator
 clear.addEventListener('click', ()=> {
     array = [];
-    console.log(array); 
     screenCalculator.innerHTML = 0; 
+    total.innerHTML = "";
 })
-
-
-//document.write(5 + 6);
-// document.getElementById('mon_element').setAttribute('onclick','nom_de lafonction('paramètre',event));
