@@ -5,36 +5,41 @@ let screenCalculator = document.querySelector("div#screen");
 let clear = document.querySelector("button#clear");
 let total = document.querySelector("div#total");
 
-
-
 let array = [];
+
+function update_screen(){
+    screenCalculator.innerHTML = array.join('');
+}
+
+function clear_screen(){
+    screenCalculator.innerHTML = "";
+}
 
 boutons.forEach((button) =>{
     button.addEventListener('click', ()=>{
         
         //fetsh button
         if (button.classList.contains("field")){
-            let calcul = eval(array.join(''));
             array.push(button.value);
-            ///////////////
-            screenCalculator.innerHTML = array;
-            console.log(array);
-            //Bien diférencier les boutouns field et autre pour opperateur
+            update_screen();
         }
+   
         //Backtrack
         if (button.id.match("clear_one")){
           array.pop();
-          screenCalculator.innerHTML = array.join('');
+          update_screen();
          }
-         //Result
+      
+        //Result
         if (button.id.match("result")){
             let result = eval(array.join(''));
             array = [result];
-            total.innerHTML =  array ;
-            screenCalculator.innerHTML = "";  
+            total.innerHTML =  array.join('') ;
+            clear_screen();
         }
     })
 })
+
 //Reset calculator
 clear.addEventListener('click', ()=> {
     array = [];
